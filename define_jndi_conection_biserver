@@ -1,0 +1,28 @@
+Criado JNDI 
+	Jogar drivers em 
+		tomcat/lib/
+	Editar web.xm em : 
+		tomcat/webapps/pentaho/WEB-INF/web.xml
+		Abaixo da resource ref adcionar 
+			<resource-ref>
+			    <description>JNDI_VERTICA</description>
+			    <res-ref-name>jdbc/JNDI_VERTICA</res-ref-name>
+			    <res-type>javax.sql.DataSource</res-type>
+			    <res-auth>Container</res-auth>
+			 </resource-ref>
+	Editar no contexto do tomcat : 
+		Adcionar : 
+		<Resource name="jdbc/JNDI_VERTICA" 
+		    auth="Container" type="javax.sql.DataSource"
+		    factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
+		    maxActive="20" 
+		    maxIdle="5"
+		    maxWait="10000" 
+		    username="dbadmin" 
+		    password="1234" 
+		    driverClassName="com.vertica.jdbc.Driver"
+		    url="jdbc:vertica://172.25.129.184:5433/dwlocal"
+		/> 
+
+
+Fonte : https://help.pentaho.com/Documentation/5.4/0H0/060/010/030/020
