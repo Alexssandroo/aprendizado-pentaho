@@ -1,0 +1,13 @@
+Adcionar linhas no arquivo jdbc.properties no PDI : 
+
+DataVault/type=javax.sql.DataSource
+DataVault/driver=org.postgresql.Driver
+DataVault/url=jdbc:postgresql://localhost:5432/data_vault
+DataVault/user=postgres
+DataVault/password=postgres
+
+JNDI_VERTICA/type=javax.sql.DataSource
+JNDI_VERTICA/driver=com.vertica.jdbc.Driver
+JNDI_VERTICA/url=jdbc:vertica://172.25.129.184:5433/dwlocal
+JNDI_VERTICA/user=dbadmin
+JNDI_VERTICA/password=1234
