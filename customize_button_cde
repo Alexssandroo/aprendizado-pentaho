@@ -1,0 +1,8 @@
+Exemplo de botão de adcionar customizado 
+adcionar ao post Execution :
+
+function f(){
+    $("#btn_add button")
+        .addClass("mdl-button mdl-js-button mdl-button--raised mdl-button--colored")
+        .prepend('<i class="material-icons">add</i>');
+} 
