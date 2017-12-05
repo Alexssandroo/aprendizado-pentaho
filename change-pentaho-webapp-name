@@ -1,0 +1,4 @@
+1. Edit the context.xml. Edit the path and docbase to the new context name
+<Context path="/newcontext" docbase="webapps/newcontext/">
+2. rename the webapp folder from pentaho too newcontext
+3. restart tomcat
